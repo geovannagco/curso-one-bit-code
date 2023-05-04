@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estrutura If, else and else if</title>
+
+    <style>
+      .codigo {
+        background-color: lightslategray;
+        width: 600px;
+        height: 200px;
+      }
+
+      .li {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript if, else, e else if</h1>
+    <p>Em JS, temos as seguintes declarações condicionais:</p>
+    <ul>
+      <li>
+        Use <code class="li">if</code> para especificar um bloco de código a ser
+        executado se uma condição especificada for verdadeira.
+      </li>
+      <li>
+        Use <code class="li">else</code> para especificar um bloco de código a
+        ser executado se a mesma condição for falsa.
+      </li>
+      <li>
+        Use <code class="li">else if</code> para especificar uma nova condição
+        para testar se a primeira condição for falsa.
+      </li>
+      <li>
+        Use <code class="li">switch</code> para especificar muitos blocos
+        alternativos de código a serem executados.
+      </li>
+    </ul>
+
+    <h2>If</h2>
+    <p>Sintaxe:</p>
+    <div class="codigo">
+      <pre>
+        <code>
+          if (condition) { 
+            // código a ser executado se a condição for verdadeira 
+          }
+        </code>
+      </pre>
+    </div>
+
+    <h2>Else</h2>
+    <p>Sintaxe:</p>
+    <div class="codigo">
+      <pre>
+        <code>
+          if (condition) { 
+            // código a ser executado se a condição for verdadeira 
+          } else { 
+            // código a ser executado se a condição for falsa 
+          }
+        </code>
+      </pre>
+    </div>
+
+    <h2>Else if</h2>
+    <p>Sintaxe:</p>
+    <div class="codigo">
+      <pre>
+        <code>
+          if (condition) {
+            // código a ser executado se a condição for verdadeira
+          } else if (condition2) {
+            // código a ser executado se a primeira condição for falsa e 
+            a segunda condição for verdadeira
+          } else {
+            // código a ser executo se a primeira e a segunda condição forem falsas
+          }
+        </code>
+      </pre>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
