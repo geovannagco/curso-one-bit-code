@@ -1,0 +1,77 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #d9aa52;
+  min-height: 100vh;
+
+  /* defininindo o grid */
+  display: grid;
+  /* definindo as colunas do grid*/
+  grid-template-columns: repeat(3, 1fr);
+  /* utilizando % ou fr */ /* 1fr = 25% */
+
+  /*gap - preferência ao shorthand
+  gap: linha coluna;*/
+  /* row-gap: ;
+  column-gap: ; */
+  gap: 10px 15px;
+  grid-template-areas:
+    'item-1 item-1 item-1'
+    'item-2 item-2 item-3'
+    'item-2 item-2 item-4'
+    'item-5 item-5 item-5'
+    'item-5 item-5 item-5'
+    'item-6 item-7 item-7'
+    'item-8 item-7 item-7'
+    'item-9 item-9 item-9';
+  /*definindo as linhas do grid*/
+  /* grid-template-rows: reapeat(3, 1fr); */
+  grid-auto-rows: minmax(80px, auto);
+}
+
+.item {
+  border: 2px solid #73675c;
+  background-color: #bfb1a4;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.item-1 {
+  grid-area: item-1;
+}
+
+.item-2 {
+  grid-area: item-2;
+}
+
+.item-3 {
+  grid-area: item-3;
+}
+
+.item-4 {
+  grid-area: item-4;
+}
+
+.item-5 {
+  grid-area: item-5;
+}
+
+.item-6 {
+  grid-area: item-6;
+}
+
+.item-7 {
+  grid-area: item-7;
+}
+
+.item-8 {
+  grid-area: item-8;
+}
+
+.item-9 {
+  grid-area: item-9;
+}
