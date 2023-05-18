@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estruturas de Repetição: For</title>
+  </head>
+  <body>
+    <h1>Estruturas de Repetição: For</h1>
+
+    <p>
+      Os loops são úteis para executar o mesmo código várias vezes, cada vez com
+      um valor diferente.
+    </p>
+
+    <p>A instrução <code>for</code> cria um loop com 3 expressões opcionais.</p>
+
+    <h3>Sintaxe:</h3>
+    <pre>
+      <code>
+        for (expressão 1 (inicialização); expressão 2 (condição); expressão 3 (finalização)) {
+          // bloco de código a ser executado
+        }
+      </code>
+    </pre>
+
+    <ul>
+      <li>
+        <strong>A expressão 1</strong> é executada (uma vez) antes da execução
+        do bloco de código
+        <ol>
+          <li>
+            Normalmente, a primeira expressão é usada para inicializar a
+            variável usada no loop
+          </li>
+          <li><strong>A expressão 1</strong> não é obrigatória</li>
+          <li>
+            Muitos valores podem ser inicializados, desde que separados por
+            vírgula
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>A expressão 2</strong> define a condição para executar o bloco
+        de código
+        <ol>
+          <li><strong>A expressão 2</strong> também é opcional</li>
+          <li>
+            Se a <strong>expressão 2</strong> retornar <em>true</em>, o loop
+            começará novamente. Se retornar <em>false</em> o loop terminará
+          </li>
+          <li>
+            <mark>
+              <strong>Atenção!</strong> Se a expressão 2 for omitida, deverá ser
+              fornecida uma quebra dentro do loop. Caso contrário, o loop nunca
+              terminará.
+            </mark>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>A expressão 3</strong> é executada (todas as vezes) após a
+        execução do bloco de código
+        <ol>
+          <li>
+            Frequentemente a <strong>expressão 3</strong> é usada para
+            incrementar o valor da variável inicial
+          </li>
+          <li>Também é opcional</li>
+          <li>
+            Poderá conter incrimento <code>i++</code> ou decremento
+            <code>i--</code>
+          </li>
+        </ol>
+      </li>
+    </ul>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
