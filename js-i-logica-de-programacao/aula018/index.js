@@ -13,12 +13,15 @@
 // const resultado = 6 === 6 ? 'Verdadeiro' : 'falso'; //operador ternário é a abreviação da estrutura if else
 // console.log(resultado);
 
-const hora = prompt('Informe a hora: ');
+const hora = prompt('Informe a hora: '); // Solicita ao usuário que informe a hora e armazena na variável "hora"
 
 if (hora <= 12) {
+  // Se a hora for menor ou igual a 12, exibe a mensagem "Bom dia!"
   alert('Bom dia!');
 } else if (hora <= 18) {
+  // Se a hora estiver entre 13 e 18, exibe a mensagem "Boa tarde!"
   alert('Boa tarde!');
 } else {
+  // Se a hora for maior que 18, exibe a mensagem "Boa noite!"
   alert('Boa noite!');
 }

@@ -1,16 +1,16 @@
-const resultado = prompt('Escolha uma alternativa:\na)\nb)\nc)');
+const resultado = prompt('Escolha uma alternativa:\na)\nb)\nc)'); // Solicita ao usuário que escolha uma alternativa e armazena na variável "resultado"
 
 switch (resultado) {
-  case 'a':
+  case 'a': // Se o resultado for 'a', exibe a mensagem correspondente
     alert('o resultado é "a"');
-    break;
-  case 'b':
+    break; // O comando "break" é utilizado para parar a execução do switch quando um caso é correspondido.
+  case 'b': // Se o resultado for 'b', exibe a mensagem correspondente
     alert('o resultado é "b"');
-    break; //comando para parar
-  //caso não tenha o break, o código será executado por completo
-  case 'c':
+    break; // O comando "break" é utilizado para parar a execução do switch quando um caso é correspondido.
+  // Caso não haja o break, o código continuaria executando os casos abaixo
+  case 'c': // Se o resultado for 'c', exibe a mensagem correspondente
     alert('o resultado é "c"');
     break;
-  default: //caso padrão
-    alert('finalizando...');
+  default: // Caso nenhuma das opções anteriores seja correspondida, executa o caso padrão
+    alert('finalizando...'); // Exibe a mensagem de finalização
 }
