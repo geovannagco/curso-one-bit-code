@@ -1,0 +1,60 @@
+/* style.css */
+
+/* Estilos gerais */
+
+/* Define estilos gerais para o corpo do documento */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte e a família de fontes para o corpo do documento */
+  margin: 0; /* Remove as margens externas do corpo do documento */
+  padding: 20px; /* Adiciona um espaçamento interno de 20 pixels para o corpo do documento */
+}
+
+/* Define estilos para o cabeçalho principal */
+h1 {
+  color: #333; /* Define a cor do texto como um tom de cinza escuro */
+  font-size: 28px; /* Define o tamanho da fonte como 28 pixels */
+}
+
+/* Define estilos para parágrafos */
+p {
+  color: #666; /* Define a cor do texto como um tom de cinza médio */
+  font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+  line-height: 1.5; /* Define a altura da linha como 1.5 vezes o tamanho da fonte, para um espaçamento adequado entre as linhas */
+}
+
+/* Define estilos para listas não ordenadas */
+ul {
+  list-style-type: none; /* Remove os marcadores padrão das listas não ordenadas */
+  padding: 0; /* Remove o espaçamento interno das listas não ordenadas */
+}
+
+/* Define estilos para itens de lista */
+li {
+  margin-bottom: 10px; /* Adiciona um espaçamento inferior de 10 pixels entre os itens de lista */
+}
+
+/* Define estilos para imagens */
+img {
+  max-width: 100%; /* Define a largura máxima da imagem como 100% do contêiner pai */
+  height: auto; /* Permite que a altura da imagem seja ajustada automaticamente de acordo com a largura, para manter a proporção original */
+  margin-top: 10px; /* Adiciona um espaçamento superior de 10 pixels para a imagem */
+}
+
+/* Estilos específicos */
+
+/* Define estilos para cabeçalhos secundários */
+h3 {
+  color: #333; /* Define a cor do texto como um tom de cinza escuro */
+  font-size: 22px; /* Define o tamanho da fonte como 22 pixels */
+  margin-top: 20px; /* Adiciona um espaçamento superior de 20 pixels para o cabeçalho */
+}
+
+/* Define estilos para listas aninhadas */
+ul ul {
+  margin-left: 20px; /* Adiciona um recuo à esquerda de 20 pixels para as listas aninhadas */
+}
+
+/* Define estilos para o primeiro item de cada lista aninhada */
+ul ul li:first-child {
+  margin-top: 10px; /* Adiciona um espaçamento superior de 10 pixels para o primeiro item de cada lista aninhada */
+}
