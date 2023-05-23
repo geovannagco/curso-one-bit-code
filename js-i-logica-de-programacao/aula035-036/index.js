@@ -47,3 +47,20 @@ const outros = senhorDosAneis.slice(-4);
 console.log(senhorDosAneis);
 console.log(hobbits);
 console.log(outros);
+
+//concat
+const sociedade = hobbits.concat(outros, 'Boromir');
+console.log(sociedade);
+
+// Substituindo elementos
+// splice
+const elementosRemovidos = sociedade.splice(indice, 1, 'Gandalf, o Cinzento');
+console.log(elementosRemovidos);
+console.log(sociedade);
+
+// Iterar sobre os elementos do array
+for (let indice = 0; indice < sociedade.length; indice++) {
+  const elemento = sociedade[indice];
+
+  console.log(elemento + ' se encontra na posição ' + indice);
+}
