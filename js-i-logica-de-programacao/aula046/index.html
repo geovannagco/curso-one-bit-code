@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retorno de Função</title>
+  </head>
+  <body>
+    <h1>Retorno de Função</h1>
+    <p>
+      O retorno de uma função é o valor que a função "entrega" quando é
+      executada. O retorno é especificado usando a palavra-chave 'return'
+      seguida pelo valor que você deseja retornar.
+    </p>
+    <p>Característica sobre retorno de função:</p>
+    <ul>
+      <li>
+        <strong>1. Valor de Retorno:</strong> Uma função pode retornar qualquer
+        valor, incluindo números, strings, objetos, arrays, booleanos e até
+        mesmo outras funções. O valor de retorno é o resultado da computação
+        realizada dentro da função.
+      </li>
+      <pre>
+        <code>
+        function somar(a, b) {
+          return a + b;
+        }
+
+        let resultado = somar(2, 3);
+        console.log(resultado); // Output: 5
+      </code>
+    </pre>
+      <li>
+        <strong>2. Finalização da execução:</strong> Quando uma função encontra
+        a declaração <em>'return'</em>, ela encerra sua execução imediatamente e
+        retorna o valor especificado. Qualquer código abaixo da instrução
+        <em>'return'</em> não será executado.
+      </li>
+      <pre>
+        <code>
+          function verificarPar(num) {
+            if (num % 2 === 0) {
+              return true;
+            }
+            console.log('Esta linha não será executada se o número for par.')
+          }
+
+          let isPar = verificarPar(4);
+          console.log(isPar); // Output: true
+        </code>
+      </pre>
+      <li>
+        <strong>3. Funções sem retorno explícito:</strong> Se uma função não
+        tiver uma instrução <em>'return'</em> ou se a instrução
+        <em>'return'</em> não especificar um valor, a função retornará
+        <em>'undefined'</em> por padrão (default).
+      </li>
+      <pre>
+        <code>
+          function saudar() {
+            console.log('Olá!');
+            // Não há instrução de retorno
+          }
+
+          let resultado = saudar();
+          console.log(resultado); // Output: undefined
+        </code>
+      </pre>
+      <li>
+        <strong>4. Uso de múltiplos retornos:</strong> Uma função pode ter
+        várias instruções <em>'return'</em> ao longo de seu corpo, dependendo
+        das condições. Quando a primeira instrução <em>'return'</em> é
+        encontrada e executada, a função é encerrada e retorna o valor
+        correspondente. As instruções <em>'return'</em> subsequentes não serão
+        alcançadas.
+      </li>
+      <code>
+        <pre>
+          function verificarIdade(idade) {
+            if (idade &lt; 0) {
+              return 'Idade Inválida';
+            } else if (idade &lt; 18) {
+              return 'Menor de idade';
+            } else {
+              return 'Maior de idade';
+            }
+
+          }
+          
+          console.log(verificarIdade(25)); //Output: Maior de idade
+        </pre>
+      </code>
+    </ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
