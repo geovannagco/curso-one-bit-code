@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escopo</title>
+  </head>
+  <body>
+    <h1>Escopo</h1>
+    <p>
+      O escopo em funções refere-se à visibilidade e acessibilidade das
+      variáveis e funções dentro de uma função específica. Em JavaScript,
+      existem dois principais tipos de escopo em funções: o escopo local e o
+      escopo global.
+    </p>
+    <ul>
+      <li>
+        <strong>1. Escopo local:</strong> Quando você declara uma variável
+        dentro de uma função, ela é acessível apenas dentro dessa função. Essa
+        variável tem um escopo local, o que significa que ela não pode ser
+        acessada fora da função.
+      </li>
+      <pre>
+        <code>
+          function minhaFuncao() {
+            var x = 10; // Variável local
+            console.log(x); // Output: 10
+          }
+
+          minhaFuncao();
+          console.log(x); // Erro: x não está definido (x está fora do escopo local)
+        </code>
+      </pre>
+      <li>
+        <strong>2. Escopo global:</strong> As variáveis declaradas fora de
+        qualquer função têm escopo global, o que significa que podem ser
+        acessadas de qualquer lugar do seu código.
+      </li>
+      <pre>
+        <code>
+          var x = 10; // Variável global
+
+          function minhaFuncao() {
+            console.log(x); // Output: 10
+          }
+        </code>
+      </pre>
+    </ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
