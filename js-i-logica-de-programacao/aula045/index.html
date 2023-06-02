@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parâmetros de uma Função</title>
+  </head>
+  <body>
+    <h1>Parâmetros de uma Função</h1>
+    <p>
+      Os parâmetros de uma função são os valores que podem ser recebidos quando
+      a função é chamada. Eles permitem que você passe dados para a função, que
+      podem ser usados internamente dentro do bloco de código da função.
+    </p>
+    <p>Características dos parâmetros:</p>
+    <ul>
+      <li>
+        <strong>1. Definição de parâmetros:</strong> os parâmetros são definidos
+        na declaração da função entre parênteses, separados por vírgulas. Cada
+        parâmetro é composto por um nome único que você escolhe.
+      </li>
+      <h4>Sintaxe</h4>
+      <pre>
+        <code>
+          function saudar(nome, idade) {
+            // código da função
+          }
+        </code>
+      </pre>
+      <li>
+        <strong>2. Número de argumentos:</strong> Ao chamar a função, você
+        precisa fornecer um argumento correspondente para cada parâmetro
+        definido. O número de argumentos e prâmetros deve ser igual. Caso
+        contrário, os parâmetros restantes serão undefined.
+      </li>
+      <pre>
+        <code>
+          saudar('João', 25);
+        </code>
+      </pre>
+      <li>
+        <strong>3. Valores padrão:</strong> Você pode atribuir um valor padrão a
+        um parâmetro, caso nenhum argumento correspondente seja fornecido ao
+        chamar a função. Isso é feito usando o operador de atribuição
+        <em>('=')</em> após a declaração do parâmetro.
+      </li>
+      <pre>
+        <code>
+          function saudar(nome = 'Visitante') {
+            console.log('Olá, ' + nome + '!');
+          }
+
+          saudar(); // Output: Olá, Visitante!
+          saudar('João'); /// Output: Olá, João!
+        </code>
+      </pre>
+      <li>
+        <strong>4. Acesso aos parâmetros: </strong> Dentro do corpo da função,
+        você pode usar parâmetros como variáveis locais, referenciado-os pelo
+        nome que você atribuiu a eles.
+      </li>
+      <pre>
+        <code>
+          function saudar(nome, idade) {
+            console.log('Olá, ' + nome + '! Você tem ' + idade + ' anos.');
+          }
+        </code>
+      </pre>
+    </ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
