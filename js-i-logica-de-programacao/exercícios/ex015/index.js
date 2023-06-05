@@ -3,6 +3,11 @@
 function calcularTriangulo() {
   let base = parseFloat(prompt('Informe a base do triângulo: '));
   let altura = parseFloat(prompt('Informe a altura do triângulo: '));
+
+  if (isNaN(base) || isNaN(altura)) {
+    return 'Valores inválidos. Tente novamente.';
+  } // Verifica se os valores inseridos são números
+
   return (base * altura) / 2; // Fórmula da área do triângulo: (base * altura) / 2
 }
 
@@ -10,12 +15,22 @@ function calcularTriangulo() {
 function calcularRetangulo() {
   let base = parseFloat(prompt('Informe a base do retâgulo: '));
   let altura = parseFloat(prompt('Informe a altura do retângulo:'));
+
+  if (isNaN(base) || isNaN(altura)) {
+    return 'Valores inválidos. Tente novamente.';
+  } // Verifica se os valores inseridos são números
+
   return base * altura; // Fórmula da área do retângulo: base * altura
 }
 
 // Function Quadrado: Calcula a área de um quadrado
 function calcularQuadrado() {
   let lado = parseFloat(prompt('Informe o lado do quadrado: '));
+
+  if (isNaN(lado)) {
+    return 'Valore inválido. Tente novamente.';
+  } // Verifica se os valores inseridos são números
+
   return lado * lado; // Fórmula da área do quadrado: lado * lado
 }
 
@@ -24,13 +39,24 @@ function calcularTrapezio() {
   let baseMaior = parseFloat(prompt('Informe a base maior do trapézio: '));
   let baseMenor = parseFloat(prompt('Informe a base menor do trapézio: '));
   let altura = parseFloat(prompt('Informe a altura do trapézio: '));
+
+  if (isNaN(baseMaior) || isNaN(baseMenor) || isNaN(altura)) {
+    return 'Valores inválidos. Tente novamente.';
+  } // Verifica se os valores inseridos são números
+
   return ((baseMaior + baseMenor) * altura) / 2; // Fórmula da área do trapézio: ((baseMaior + baseMenor) * altura) / 2
 }
 
 // Function Círculo: Calcula a área de um círculo
 function calcularCirculo() {
   let raio = parseFloat(prompt('Informe o raio do círculo: '));
+
+  if (isNaN(raio)) {
+    return 'Valor inválido. Tente novamente.';
+  } // Verifica se os valores inseridos são números
+
   let pi = 3.14;
+
   return pi * (raio * raio); // Fórmula da área do círculo: pi * (raio * raio)
 }
 
