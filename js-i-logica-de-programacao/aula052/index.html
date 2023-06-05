@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções Anônimas</title>
+  </head>
+  <body>
+    <h1>Funções Anônimas</h1>
+    <p>
+      Uma função anônima em JavaScript é uma função que não possui um nome
+      atribuído. Em vez de definida com um nome como uma função regular, ela é
+      criada como uma expressão e pode ser atribuida a uma variável ou passada
+      como argumento para outra função.
+    </p>
+
+    <h4>Exemplo:</h4>
+    <pre>
+      <code>
+        const soma = function(a, b) {
+          return a + b;
+        }
+
+        console.log(soma(2, 3)); // Retorna 5
+      </code>
+    </pre>
+
+    <p>
+      Funções anônimas são frequentemente usadas em JavaScript para várias
+      finalidades, como:
+    </p>
+    <ul>
+      <li>
+        <strong>Callbacks:</strong> São passadas como argumentos para outras
+        funções para serem chamadas em algum momento posterior, geralmente
+        quando um evento ocorre ou quando uma operação assíncrona é concluída.
+        Um exemplo comum é o uso de funções anônimas em funções
+        <em>'setTimeout'</em> ou <em>'addEventListener'</em>.
+        <pre>
+          <code>
+            setTimeout(function()) {
+              console.log('Tempo Expirado!');
+            }, 1000);
+          </code>
+        </pre>
+      </li>
+      <li>
+        <strong>Closures:</strong> Funções anônimas podem ser usadas dentro de
+        outras funções para criar um escopo encapsulado e preservar o estado de
+        variáveis. Isso permite criar funções que carregam consigo um contexto
+        específico.
+        <pre>
+          <code>
+            function contador() {
+              let count = 0;
+
+              return function() {
+                count++;
+                console.log(count);
+              }
+            }
+
+            const incrementar = contador();
+            incrementar(); // Retorna 1
+            incrementar(); // Retorna 2
+          </code>
+        </pre>
+      </li>
+      <li>
+        <strong>IIFE (Immediately Invoked Expression):</strong> Funções anônimas
+        também podem ser usadas para criar expressões de função invocadas
+        imediatamente. Elas são úteis para evitar poluir o escopo global e para
+        criar um escopo isolado para variáveis temporárias.
+
+        <pre>
+          <code>
+            (function() {
+              const nome = 'João';
+              console.log('Olá, ${nome}!')
+            })();
+          </code>
+        </pre>
+      </li>
+    </ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
