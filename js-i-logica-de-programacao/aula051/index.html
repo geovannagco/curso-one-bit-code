@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções Recursivas</title>
+  </head>
+  <body>
+    <h1>Funções Recursivas</h1>
+    <p>
+      Em JavaScript, funções recursivas são aquelas que chamam a si mesmas
+      durante sua execução. Essas funções são úteis quando precisamos resolver
+      um problema de forma iterativa, dividindo-o em subproblemas que podem ser
+      resolvidos utilizando a mesma função.
+    </p>
+    <h4>Exemplo:</h4>
+    <pre>
+      <code>
+        function factorial(n) {
+          // Caso base: quando n é igual a 0 ou 1, o fatorial é 1
+          if (n === 0 || n === 1) {
+            return 1;
+          }
+
+          // Chamada recursiva: n * (n - 1)!
+          return n * factorial(n - 1);
+        }
+
+        console.log(factorial(5)); // Retorna 120 (5! = 5 * 4 * 3 * 2 * 1)
+      </code>
+    </pre>
+    <p>
+      No exemplo, a função <strong>'factorial'</strong> é definida para calcular
+      o fatorial de um número <em>'n'</em>. Ela verifica se <em>'n'</em> é igual
+      a 0 ou 1, o que são os casos base. Se for esse o caso, a função retorna 1,
+      pois o fatorial de 0 ou 1 é 1. Caso contrário, a função chama a si mesma
+      com <strong>'n - 1'</strong> e multiplica o resultado pelo valor de
+      <em>'n'</em>. Esse processo é repetido até que <em>'n'</em> seja reduzido
+      a 0 ou 1, e então os resultados são retornado em cascata para calcular o
+      resultadso final.
+    </p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
