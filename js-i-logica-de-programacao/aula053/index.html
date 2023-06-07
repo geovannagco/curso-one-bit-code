@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High-Order Functions</title>
+  </head>
+  <body>
+    <h1>High-Order Functions</h1>
+    <p>
+      As high-order functions (funções de alta ordem) são funções que podem
+      receber outras funções como argumentos e/ou retornar funções como
+      resultado. Isso significa que as funções em JavaScript são tratadas como
+      valores de primeira classe, assim como números ou strings.
+    </p>
+    <p>
+      As high-order functions permitem uma programação mais flexível e poderosa,
+      tornando o código mais modular e fácfil de ler. Com elas, você pode
+      escrever funções que são mais genéricas e reutilizáveis, já que podem
+      receber comportamentos específicos através de funções passadas como
+      argumentos.
+    </p>
+    <p>
+      Um exemplo clásico de high-order function em Js é a função
+      <em>'map()'</em>. Ela recebe uma função como argumento e a aplica a cada
+      elemento de um array, retornando um novo array com os resultados.
+    </p>
+
+    <h3>Exemplo:</h3>
+    <pre>
+      <code>
+        const numeros = [1, 2, 3, 4, 5];
+
+        const aoQuadrado = numeros.map(function(numero) {
+          return numero ** 2;
+        });
+
+        console.log(aoQuadrado); // [1, 4, 9, 16, 25]
+      </code>
+    </pre>
+    <p>
+      Nesse exemplo, a função <em>'map()'</em> recebe uma função anônima como
+      argumento, que eleva cada número ao quadrado. A <em>'map()'</em> aplica
+      essa função a cada elemento do array <strong>'numeros'</strong> e retorna
+      um novo array com os valores resultantes.
+    </p>
+    <script src="index.js"></script>
+  </body>
+</html>
