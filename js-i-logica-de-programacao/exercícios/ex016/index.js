@@ -1,7 +1,7 @@
 const vagas = []; // Declara um array vazio para armazenar as vagas
 
 function listarVagas() {
-  const vagasEmTexto = vagas.reduce(function (textoFinal, vaga, indice) {
+  const vagasEmTexto = vagas.reduce((textoFinal, vaga, indice) => {
     // Declaração de uma variável chamada 'vagasEmTexto'
     // O método reduce é aplicado ao array 'vagas' para iterar por cada elemento e reduzi-los a um único valor, nesse caso, uma strinf que representa as vagas.
     // A função passada para o 'reduce' recebe três argumentos:
@@ -10,7 +10,7 @@ function listarVagas() {
     // 3º 'indice', que representa o índice atual do elemento no array
     textoFinal += indice + '. '; // Adiciona o índice da vaga no texto
     textoFinal += vaga.nome; // Adiciona o nome da vaga no texto
-    textoFinal += ' (' + vaga.candidatos.lenght + ' candidatos)\n'; // Adiciona o número de candidatos no texto
+    textoFinal += ' (' + vaga.candidatos.length + ' candidatos)\n'; // Adiciona o número de candidatos no texto
     return textoFinal;
   }, ''); // Inicializa o texto final como uma string vazia
 
@@ -37,7 +37,7 @@ function novaVaga() {
   if (confirmacao) {
     // Verifica se o usuário confirmou a criação da nova vaga
     const novaVaga = { nome, descricao, dataLimite, candidatos: [] }; // Cria um objeto 'novaVaga' contendo as informações inseridas pelo usuário, incluindo um array vazio para 'candidatos'
-    vagas.push(); // Adiciona a 'novaVaga' ao array 'vagas'
+    vagas.push(novaVaga); // Adiciona a 'novaVaga' ao array 'vagas'
     alert('Vaga criada!'); // Exibe um alerta informando que a vaga foi criada com sucesso
   }
 }
@@ -46,13 +46,10 @@ function exibirVaga() {
   const indice = prompt('Informe o índice da vaga que deseja exibir: '); // Solicita ao usuário que informe o índice da vaga que deseja exibir por meio de um prompt e armazena o valor na variável 'indice'
   const vaga = vagas[indice]; // Acessa a vaga no array 'vagas' com base no índice informado e armazena o objeto de vaga correspondente na variável 'vaga'
 
-  const candidatosEmTexto = vaga.candidatos.reduce(function (
-    textoFinal,
-    candidato
-  ) {
-    return textoFinal + '\n - ' + candidato;
-  },
-  ''); // Utiliza o método 'reduce' para percorrer o array 'candidatos' da vaga e criar uma string formatada com os nomes dos candidatos, separados por quebras de linha
+  const candidatosEmTexto = vaga.candidatos.reduce(
+    (textoFinal, candidato) => textoFinal + '\n - ' + candidato,
+    ''
+  ); // Utiliza o método 'reduce' para percorrer o array 'candidatos' da vaga e criar uma string formatada com os nomes dos candidatos, separados por quebras de linha
 
   alert(
     'Vaga nº ' +
@@ -126,7 +123,7 @@ function excluirVaga() {
 
   if (confirmacao) {
     // Verifica se o usuário confirmou a exclusão da vaga
-    vagas.splice(indice, 1); // Remove a vaga do array 'vagas' utilizando o método 'splice' com o índice e quantidade 1 para remover apenas a vaga em questão
+    vagas.splice(parseInt(indice), 1); // Remove a vaga do array 'vagas' utilizando o método 'splice' com o índice e quantidade 1 para remover apenas a vaga em questão
     alert('Vaga excluída!'); // Exibe um alerta informando que a vaga foi excluída com sucesso
   }
 }
@@ -139,9 +136,43 @@ function exibirMenu() {
       '\n2. Criar nova vaga' +
       '\n3. Exibir uma vaga' +
       '\n4. Inscrever candidato' +
-      '\n5. Exluir vaga' +
+      '\n5. Excluir vaga' +
       '\n6. Sair'
   );
 
   return opcao;
 }
+
+function executar() {
+  let opcao = '';
+
+  // Executa um loop do-while para exibir o menu e processar a opção selecionada pelo usuário
+  do {
+    opcao = exibirMenu(); // Chama a função exibirMenu para exibir as opções e obter a escolha do usuário
+
+    switch (opcao) {
+      case '1':
+        listarVagas(); // Chama a função listarVagas se a opção selecionada for '1'
+        break;
+      case '2':
+        novaVaga(); // Chama a função novaVaga se a opção selecionada for '2'
+        break;
+      case '3':
+        exibirVaga(); // Chama a função exibirVaga se a opção selecionada for '3'
+        break;
+      case '4':
+        inscreverCandidato(); // Chama a função inscreverCandidato se a opção selecionada for '4'
+        break;
+      case '5':
+        excluirVaga(); // Chama a função excluirVaga se a opção selecionada for '5'
+        break;
+      case '6':
+        alert('Saindo...'); // Exibe uma mensagem de alerta se a opção selecionada for '6'
+        break;
+      default:
+        alert('Opção invalida!'); // Exibe uma mensagem de alerta se a opção selecionada for diferente de '1', '2', '3', '4', '5' ou '6'
+    }
+  } while (opcao !== '6'); // O loop continua enquanto a opção selecionada pelo usuário for diferente de '6'
+}
+
+executar();
